@@ -20,6 +20,11 @@ These are formalizations of classical identities. This package does not include 
 The real-valued definitions are total expressions; positivity and analytic hypotheses must
 be supplied when interpreting them as information of probability densities.
 
+The finite theorem requires nonvanishing, normalization, and twice differentiable
+coordinate functions over the whole real parameter line. The integral theorem retains
+explicit domination and integrability hypotheses; `KLIntegralRegularAt` bundles those
+obligations for callers. These assumptions remain part of each theorem's contract.
+
 ## Use
 
 ```lean
