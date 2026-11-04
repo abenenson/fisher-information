@@ -1,0 +1,12 @@
+✔ [3072/3082] Built FisherInformation.KLFinite (6.0s)
+✔ [3073/3082] Built FisherInformation.RegularFinite (2.5s)
+✔ [3074/3082] Built FisherInformation.KLFiniteDirectional (2.4s)
+✔ [3075/3082] Built FisherInformation.KLIntegral (5.8s)
+✔ [3076/3082] Built FisherInformation.KLIntegralRegularAt (3.2s)
+✔ [3077/3082] Built FisherInformation.KLDivBridge (3.3s)
+✔ [3078/3082] Built FisherInformation.KLIntegralDirectional (2.9s)
+✔ [3079/3082] Built FisherInformation.KLIntegralDirectionalFDeriv (3.2s)
+✔ [3080/3082] Built FisherInformation (2.8s)
+✔ [3081/3082] Built FisherInformationExamples.Bernoulli (2.0s)
+✔ [3082/3082] Built FisherInformationExamples (2.6s)
+Build completed successfully (3082 jobs).

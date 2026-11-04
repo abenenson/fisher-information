@@ -1,0 +1,149 @@
+{
+  "phase": "fisher-verify-3",
+  "command": [
+    "python3",
+    "scripts/verify.py",
+    "--evidence-dir",
+    "verification-artifacts/release-20261104-3"
+  ],
+  "cwd": "/workspace/sft-open-source/fisher-information",
+  "disk_floor_bytes": 8589934592,
+  "candidate_cap_bytes": 21474836480,
+  "cache_cap_bytes": 19327352832,
+  "cache_roots": [
+    "/workspace/sft-open-source/finite-markov-kernels/.lake",
+    "/workspace/sft-open-source/measure-discrimination/.lake",
+    "/workspace/sft-open-source/berge-maximum/.lake",
+    "/workspace/sft-open-source/finite-relative-entropy/.lake",
+    "/workspace/sft-open-source/finite-causal-control/.lake",
+    "/workspace/sft-open-source/fisher-information/.lake"
+  ],
+  "accounting_root": "/workspace/sft-open-source",
+  "accounting_scope": "actual-task-repo",
+  "before": {
+    "available_overlay_bytes": 31755620352,
+    "candidate_apparent_file_bytes": 110733226,
+    "cache_apparent_file_bytes": 107840194
+  },
+  "samples": [
+    {
+      "elapsed_seconds": 5.293360229999962,
+      "available_overlay_bytes": 31757459456,
+      "candidate_apparent_file_bytes": 109036421,
+      "cache_apparent_file_bytes": 106137198
+    },
+    {
+      "elapsed_seconds": 10.540508809999665,
+      "available_overlay_bytes": 31757156352,
+      "candidate_apparent_file_bytes": 109334139,
+      "cache_apparent_file_bytes": 106434916
+    },
+    {
+      "elapsed_seconds": 15.787756148999506,
+      "available_overlay_bytes": 31756935168,
+      "candidate_apparent_file_bytes": 109524567,
+      "cache_apparent_file_bytes": 106625344
+    },
+    {
+      "elapsed_seconds": 21.068167065000125,
+      "available_overlay_bytes": 31756005376,
+      "candidate_apparent_file_bytes": 110398685,
+      "cache_apparent_file_bytes": 107497441
+    },
+    {
+      "elapsed_seconds": 26.453827864999766,
+      "available_overlay_bytes": 31755878400,
+      "candidate_apparent_file_bytes": 110496186,
+      "cache_apparent_file_bytes": 107594942
+    },
+    {
+      "elapsed_seconds": 31.788737216999834,
+      "available_overlay_bytes": 31755612160,
+      "candidate_apparent_file_bytes": 110734761,
+      "cache_apparent_file_bytes": 107833517
+    },
+    {
+      "elapsed_seconds": 37.06480736100002,
+      "available_overlay_bytes": 31755554816,
+      "candidate_apparent_file_bytes": 110760419,
+      "cache_apparent_file_bytes": 107840194
+    },
+    {
+      "elapsed_seconds": 42.42113635299938,
+      "available_overlay_bytes": 31755513856,
+      "candidate_apparent_file_bytes": 110794653,
+      "cache_apparent_file_bytes": 107840194
+    },
+    {
+      "elapsed_seconds": 47.706243267999525,
+      "available_overlay_bytes": 31755497472,
+      "candidate_apparent_file_bytes": 110806451,
+      "cache_apparent_file_bytes": 107840194
+    },
+    {
+      "elapsed_seconds": 52.96165354099958,
+      "available_overlay_bytes": 31755489280,
+      "candidate_apparent_file_bytes": 110809878,
+      "cache_apparent_file_bytes": 107840194
+    },
+    {
+      "elapsed_seconds": 58.24427668199951,
+      "available_overlay_bytes": 31755464704,
+      "candidate_apparent_file_bytes": 110819602,
+      "cache_apparent_file_bytes": 107840194
+    },
+    {
+      "elapsed_seconds": 63.52010268399954,
+      "available_overlay_bytes": 31755456512,
+      "candidate_apparent_file_bytes": 110823121,
+      "cache_apparent_file_bytes": 107840194
+    },
+    {
+      "elapsed_seconds": 68.83355745599965,
+      "available_overlay_bytes": 31755448320,
+      "candidate_apparent_file_bytes": 110827186,
+      "cache_apparent_file_bytes": 107840194
+    },
+    {
+      "elapsed_seconds": 74.08329600599973,
+      "available_overlay_bytes": 31755423744,
+      "candidate_apparent_file_bytes": 110836403,
+      "cache_apparent_file_bytes": 107840194
+    },
+    {
+      "elapsed_seconds": 79.34906095299993,
+      "available_overlay_bytes": 31755407360,
+      "candidate_apparent_file_bytes": 110841561,
+      "cache_apparent_file_bytes": 107840194
+    }
+  ],
+  "started_utc": "2026-11-04T05:39:10Z",
+  "resource_guard_command": [
+    "/workspace/.cloud-tools/mcp-v2-venv/bin/python",
+    "/workspace/stigmergic-consciousness/omega-flow/lean/docs/operations/tooling/cloud/runtime/resource_guard.py",
+    "--seconds",
+    "900",
+    "--gib",
+    "16",
+    "--receipt",
+    "/workspace/sft-open-source/release-evidence/resources/fisher-verify-3-resources.json",
+    "--",
+    "python3",
+    "scripts/verify.py",
+    "--evidence-dir",
+    "verification-artifacts/release-20261104-3"
+  ],
+  "reason": "completed",
+  "exit_code": 0,
+  "elapsed_seconds": 83.04253756300022,
+  "after": {
+    "available_overlay_bytes": 31755374592,
+    "candidate_apparent_file_bytes": 110866437,
+    "cache_apparent_file_bytes": 107840194
+  },
+  "peak_candidate_apparent_file_bytes": 110866437,
+  "peak_cache_apparent_file_bytes": 107840194,
+  "minimum_available_overlay_bytes": 31755374592,
+  "final_sample_included_in_extrema": true,
+  "final_bounds_problem": null
+}

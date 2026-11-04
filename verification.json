@@ -1,0 +1,107 @@
+{
+  "root_module": "FisherInformation",
+  "source_files": [
+    "FisherInformation/KLFinite.lean",
+    "FisherInformation/KLIntegral.lean",
+    "FisherInformation/KLDivBridge.lean",
+    "FisherInformation/RegularFinite.lean",
+    "FisherInformation/KLFiniteDirectional.lean",
+    "FisherInformation/KLIntegralRegularAt.lean",
+    "FisherInformation/KLIntegralDirectional.lean",
+    "FisherInformation/KLIntegralDirectionalFDeriv.lean",
+    "FisherInformation.lean",
+    "FisherInformationExamples/Bernoulli.lean",
+    "FisherInformationExamples.lean"
+  ],
+  "audit_imports": [
+    "FisherInformation",
+    "FisherInformationExamples"
+  ],
+  "declarations": [
+    "FisherInformation.klFiniteReal",
+    "FisherInformation.klFiniteRealParamGen",
+    "FisherInformation.klFiniteRealParam",
+    "FisherInformation.deriv_log_div_const",
+    "FisherInformation.deriv_klFiniteRealParam_second",
+    "FisherInformation.fisherScore",
+    "FisherInformation.fisherKL",
+    "FisherInformation.fisherKL_eq_fisherScore",
+    "FisherInformation.klIntegralReal",
+    "FisherInformation.klIntegralRealParam",
+    "FisherInformation.klIntegralReal_eq_integral_klFun_of_integral_eq",
+    "FisherInformation.hasDerivAt_klIntegrand_secondArg",
+    "FisherInformation.deriv_klIntegralRealParam_second",
+    "FisherInformation.klFiniteRealParam_eq_klIntegralRealParam_count",
+    "FisherInformation.fisherScoreIntegral",
+    "FisherInformation.fisherKLIntegral",
+    "FisherInformation.hasDerivAt_scoreIntegrand_secondArg",
+    "FisherInformation.integral_second_deriv_eq_zero_of_integral_eq_const",
+    "FisherInformation.fisherKLIntegral_eq_fisherScoreIntegral",
+    "FisherInformation.fisherKLIntegral_eq_fisherScoreIntegral_of_integral_eq_const",
+    "FisherInformation.klIntegralReal_eq_toReal_klDiv_withDensity_of_integral_eq",
+    "FisherInformation.klIntegralRealParam_eq_toReal_klDiv_withDensity_of_integral_eq",
+    "FisherInformation.RegularDensityModelFinite",
+    "FisherInformation.RegularDensityModelFinite.ne_zero",
+    "FisherInformation.RegularDensityModelFinite.line_ne_zero",
+    "FisherInformation.Fisher.pLine",
+    "FisherInformation.Fisher.fisherScoreDir",
+    "FisherInformation.Fisher.fisherKLDir",
+    "FisherInformation.Fisher.fisherKLDir_eq_fisherScoreDir",
+    "FisherInformation.KLIntegralRegularAt",
+    "FisherInformation.fisherKLIntegral_eq_fisherScoreIntegral_of_regularAt",
+    "FisherInformation.pLine",
+    "FisherInformation.fisherScoreIntegralDir",
+    "FisherInformation.fisherKLIntegralDir",
+    "FisherInformation.fisherKLIntegralDir_eq_fisherScoreIntegralDir",
+    "FisherInformation.fisherScoreIntegralDir_eq_integral_fderiv_sq_div",
+    "FisherInformation.fisherKLIntegralDir_eq_integral_fderiv_sq_div",
+    "FisherInformation.Examples.bernoulli",
+    "FisherInformation.Examples.bernoulli_pos",
+    "FisherInformation.Examples.bernoulli_sum",
+    "FisherInformation.Examples.bernoulli_fisherScore_zero",
+    "FisherInformation.Examples.bernoulli_fisherKL_zero",
+    "FisherInformation.Examples.bernoulli_fisherScoreIntegral_zero",
+    "FisherInformation.Examples.bernoulli_counting_kl",
+    "FisherInformation.Examples.bernoulli_fisherKLIntegral_zero",
+    "FisherInformation.Examples.bernoulli_measure_kl"
+  ],
+  "examples_module": "FisherInformationExamples",
+  "public_dependencies": {
+    "mathlib": {
+      "rev": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+      "url": "https://github.com/leanprover-community/mathlib4"
+    },
+    "plausible": {
+      "rev": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+      "url": "https://github.com/leanprover-community/plausible"
+    },
+    "LeanSearchClient": {
+      "rev": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+      "url": "https://github.com/leanprover-community/LeanSearchClient"
+    },
+    "importGraph": {
+      "rev": "e928b72544873815af278d38681b31c0293588e3",
+      "url": "https://github.com/leanprover-community/import-graph"
+    },
+    "proofwidgets": {
+      "rev": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+      "url": "https://github.com/leanprover-community/ProofWidgets4"
+    },
+    "aesop": {
+      "rev": "355695d523e41d0554926416cba2a2b3544fbbc9",
+      "url": "https://github.com/leanprover-community/aesop"
+    },
+    "Qq": {
+      "rev": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+      "url": "https://github.com/leanprover-community/quote4"
+    },
+    "batteries": {
+      "rev": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+      "url": "https://github.com/leanprover-community/batteries"
+    },
+    "Cli": {
+      "rev": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204",
+      "url": "https://github.com/leanprover/lean4-cli"
+    }
+  }
+}
