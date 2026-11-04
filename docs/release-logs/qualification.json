@@ -1,0 +1,509 @@
+{
+  "status": "passed",
+  "stages": [
+    {
+      "name": "compiler-version",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--version"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "exact-build",
+      "command": [
+        "lake",
+        "--rehash",
+        "--wfail",
+        "build",
+        "+FisherInformation.KLFinite:olean",
+        "+FisherInformation.KLIntegral:olean",
+        "+FisherInformation.KLDivBridge:olean",
+        "+FisherInformation.RegularFinite:olean",
+        "+FisherInformation.KLFiniteDirectional:olean",
+        "+FisherInformation.KLIntegralRegularAt:olean",
+        "+FisherInformation.KLIntegralDirectional:olean",
+        "+FisherInformation.KLIntegralDirectionalFDeriv:olean",
+        "+FisherInformation:olean",
+        "+FisherInformationExamples.Bernoulli:olean",
+        "+FisherInformationExamples:olean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FisherInformation-KLFinite.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j2",
+        "--json",
+        "--root=/workspace/verification-open-source/fisher-information/verification-artifacts/release-20261104-3/lint-sources",
+        "/workspace/verification-open-source/fisher-information/verification-artifacts/release-20261104-3/lint-sources/FisherInformation/KLFinite.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FisherInformation-KLIntegral.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j2",
+        "--json",
+        "--root=/workspace/verification-open-source/fisher-information/verification-artifacts/release-20261104-3/lint-sources",
+        "/workspace/verification-open-source/fisher-information/verification-artifacts/release-20261104-3/lint-sources/FisherInformation/KLIntegral.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FisherInformation-KLDivBridge.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j2",
+        "--json",
+        "--root=/workspace/verification-open-source/fisher-information/verification-artifacts/release-20261104-3/lint-sources",
+        "/workspace/verification-open-source/fisher-information/verification-artifacts/release-20261104-3/lint-sources/FisherInformation/KLDivBridge.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FisherInformation-RegularFinite.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j2",
+        "--json",
+        "--root=/workspace/verification-open-source/fisher-information/verification-artifacts/release-20261104-3/lint-sources",
+        "/workspace/verification-open-source/fisher-information/verification-artifacts/release-20261104-3/lint-sources/FisherInformation/RegularFinite.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FisherInformation-KLFiniteDirectional.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j2",
+        "--json",
+        "--root=/workspace/verification-open-source/fisher-information/verification-artifacts/release-20261104-3/lint-sources",
+        "/workspace/verification-open-source/fisher-information/verification-artifacts/release-20261104-3/lint-sources/FisherInformation/KLFiniteDirectional.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FisherInformation-KLIntegralRegularAt.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j2",
+        "--json",
+        "--root=/workspace/verification-open-source/fisher-information/verification-artifacts/release-20261104-3/lint-sources",
+        "/workspace/verification-open-source/fisher-information/verification-artifacts/release-20261104-3/lint-sources/FisherInformation/KLIntegralRegularAt.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FisherInformation-KLIntegralDirectional.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j2",
+        "--json",
+        "--root=/workspace/verification-open-source/fisher-information/verification-artifacts/release-20261104-3/lint-sources",
+        "/workspace/verification-open-source/fisher-information/verification-artifacts/release-20261104-3/lint-sources/FisherInformation/KLIntegralDirectional.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FisherInformation-KLIntegralDirectionalFDeriv.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j2",
+        "--json",
+        "--root=/workspace/verification-open-source/fisher-information/verification-artifacts/release-20261104-3/lint-sources",
+        "/workspace/verification-open-source/fisher-information/verification-artifacts/release-20261104-3/lint-sources/FisherInformation/KLIntegralDirectionalFDeriv.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FisherInformation.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j2",
+        "--json",
+        "--root=/workspace/verification-open-source/fisher-information/verification-artifacts/release-20261104-3/lint-sources",
+        "/workspace/verification-open-source/fisher-information/verification-artifacts/release-20261104-3/lint-sources/FisherInformation.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FisherInformationExamples-Bernoulli.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j2",
+        "--json",
+        "--root=/workspace/verification-open-source/fisher-information/verification-artifacts/release-20261104-3/lint-sources",
+        "/workspace/verification-open-source/fisher-information/verification-artifacts/release-20261104-3/lint-sources/FisherInformationExamples/Bernoulli.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FisherInformationExamples.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j2",
+        "--json",
+        "--root=/workspace/verification-open-source/fisher-information/verification-artifacts/release-20261104-3/lint-sources",
+        "/workspace/verification-open-source/fisher-information/verification-artifacts/release-20261104-3/lint-sources/FisherInformationExamples.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "axioms",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j2",
+        "--json",
+        "/workspace/verification-open-source/fisher-information/verification-artifacts/release-20261104-3/axioms.lean"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "source_sha256": {
+    "FisherInformation/KLFinite.lean": "69df8681492b510c35169b0ca5a754fc347255b25a859253f543d467d88e0748",
+    "FisherInformation/KLIntegral.lean": "d6dc6080cb0f65cb60a640d91425b9ef4fefd3c04b3fcf94eec1f7ce27f2ecae",
+    "FisherInformation/KLDivBridge.lean": "3d29b11084591d6cbdd63707c3be246d27bee10b00b3b80e94ef7bdb63aa5801",
+    "FisherInformation/RegularFinite.lean": "d2d67ae4dce6a2bce1529c5b55ca59c456b6dcb8fcd0ab5b32a55feb36c7c0ef",
+    "FisherInformation/KLFiniteDirectional.lean": "e878db3bbe7cb04dd83f8b322d7e0293e3e96c787d5cd85d7f625b0ce0a475e7",
+    "FisherInformation/KLIntegralRegularAt.lean": "3a12564c3180ab5f83e46a3200f4aff51b93124a5655c7d55fedc585945e83c8",
+    "FisherInformation/KLIntegralDirectional.lean": "3e6180528aeaa214a6f9e07570ab9b2bc533d46515f7fac22f635e8b5dd42d24",
+    "FisherInformation/KLIntegralDirectionalFDeriv.lean": "9b298ef34b9d378eb1f1f7b820027c796c7e863d56cd70de9d7d5326a4365ab9",
+    "FisherInformation.lean": "cb2d34809fad994861f1b74a4c2181400aade5da4f364dbe00ed0b1253fa622b",
+    "FisherInformationExamples/Bernoulli.lean": "18c81edc3046b497b062bb0e9f05f99c1fb2a439ec409f91f7d70db79fbad965",
+    "FisherInformationExamples.lean": "97ac6ab108cf0204bab796edf196045b90b9767cb33ef5444c2862c9d8939e36"
+  },
+  "axioms": {
+    "FisherInformation.klFiniteReal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.klFiniteRealParamGen": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.klFiniteRealParam": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.deriv_log_div_const": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.deriv_klFiniteRealParam_second": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherScore": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherKL": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherKL_eq_fisherScore": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.klIntegralReal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.klIntegralRealParam": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.klIntegralReal_eq_integral_klFun_of_integral_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.hasDerivAt_klIntegrand_secondArg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.deriv_klIntegralRealParam_second": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.klFiniteRealParam_eq_klIntegralRealParam_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherScoreIntegral": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherKLIntegral": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.hasDerivAt_scoreIntegrand_secondArg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.integral_second_deriv_eq_zero_of_integral_eq_const": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherKLIntegral_eq_fisherScoreIntegral": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherKLIntegral_eq_fisherScoreIntegral_of_integral_eq_const": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.klIntegralReal_eq_toReal_klDiv_withDensity_of_integral_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.klIntegralRealParam_eq_toReal_klDiv_withDensity_of_integral_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.RegularDensityModelFinite": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.RegularDensityModelFinite.ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.RegularDensityModelFinite.line_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Fisher.pLine": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Fisher.fisherScoreDir": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Fisher.fisherKLDir": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Fisher.fisherKLDir_eq_fisherScoreDir": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.KLIntegralRegularAt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherKLIntegral_eq_fisherScoreIntegral_of_regularAt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.pLine": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherScoreIntegralDir": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherKLIntegralDir": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherKLIntegralDir_eq_fisherScoreIntegralDir": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherScoreIntegralDir_eq_integral_fderiv_sq_div": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherKLIntegralDir_eq_integral_fderiv_sq_div": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Examples.bernoulli": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Examples.bernoulli_pos": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Examples.bernoulli_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Examples.bernoulli_fisherScore_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Examples.bernoulli_fisherKL_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Examples.bernoulli_fisherScoreIntegral_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Examples.bernoulli_counting_kl": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Examples.bernoulli_fisherKLIntegral_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Examples.bernoulli_measure_kl": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "scope": "Authored sources and explicit named transitive dependencies",
+  "compiler_version": "Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+  "dependency_revisions": {
+    "mathlib": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+    "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+    "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+    "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+    "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+    "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+    "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+    "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+    "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+  },
+  "removed_authored_artifacts": [
+    ".lake/build/lib/lean/FisherInformation/KLFinite.ilean",
+    ".lake/build/lib/lean/FisherInformation/KLFinite.ilean.hash",
+    ".lake/build/lib/lean/FisherInformation/KLFinite.olean",
+    ".lake/build/lib/lean/FisherInformation/KLFinite.olean.hash",
+    ".lake/build/lib/lean/FisherInformation/KLFinite.trace",
+    ".lake/build/lib/lean/FisherInformation/KLIntegral.ilean",
+    ".lake/build/lib/lean/FisherInformation/KLIntegral.ilean.hash",
+    ".lake/build/lib/lean/FisherInformation/KLIntegral.olean",
+    ".lake/build/lib/lean/FisherInformation/KLIntegral.olean.hash",
+    ".lake/build/lib/lean/FisherInformation/KLIntegral.trace",
+    ".lake/build/lib/lean/FisherInformation/KLDivBridge.ilean",
+    ".lake/build/lib/lean/FisherInformation/KLDivBridge.ilean.hash",
+    ".lake/build/lib/lean/FisherInformation/KLDivBridge.olean",
+    ".lake/build/lib/lean/FisherInformation/KLDivBridge.olean.hash",
+    ".lake/build/lib/lean/FisherInformation/KLDivBridge.trace",
+    ".lake/build/lib/lean/FisherInformation/RegularFinite.ilean",
+    ".lake/build/lib/lean/FisherInformation/RegularFinite.ilean.hash",
+    ".lake/build/lib/lean/FisherInformation/RegularFinite.olean",
+    ".lake/build/lib/lean/FisherInformation/RegularFinite.olean.hash",
+    ".lake/build/lib/lean/FisherInformation/RegularFinite.trace",
+    ".lake/build/lib/lean/FisherInformation/KLFiniteDirectional.ilean",
+    ".lake/build/lib/lean/FisherInformation/KLFiniteDirectional.ilean.hash",
+    ".lake/build/lib/lean/FisherInformation/KLFiniteDirectional.olean",
+    ".lake/build/lib/lean/FisherInformation/KLFiniteDirectional.olean.hash",
+    ".lake/build/lib/lean/FisherInformation/KLFiniteDirectional.trace",
+    ".lake/build/lib/lean/FisherInformation/KLIntegralRegularAt.ilean",
+    ".lake/build/lib/lean/FisherInformation/KLIntegralRegularAt.ilean.hash",
+    ".lake/build/lib/lean/FisherInformation/KLIntegralRegularAt.olean",
+    ".lake/build/lib/lean/FisherInformation/KLIntegralRegularAt.olean.hash",
+    ".lake/build/lib/lean/FisherInformation/KLIntegralRegularAt.trace",
+    ".lake/build/lib/lean/FisherInformation/KLIntegralDirectional.ilean",
+    ".lake/build/lib/lean/FisherInformation/KLIntegralDirectional.ilean.hash",
+    ".lake/build/lib/lean/FisherInformation/KLIntegralDirectional.olean",
+    ".lake/build/lib/lean/FisherInformation/KLIntegralDirectional.olean.hash",
+    ".lake/build/lib/lean/FisherInformation/KLIntegralDirectional.trace",
+    ".lake/build/lib/lean/FisherInformation/KLIntegralDirectionalFDeriv.ilean",
+    ".lake/build/lib/lean/FisherInformation/KLIntegralDirectionalFDeriv.ilean.hash",
+    ".lake/build/lib/lean/FisherInformation/KLIntegralDirectionalFDeriv.olean",
+    ".lake/build/lib/lean/FisherInformation/KLIntegralDirectionalFDeriv.olean.hash",
+    ".lake/build/lib/lean/FisherInformation/KLIntegralDirectionalFDeriv.trace",
+    ".lake/build/lib/lean/FisherInformation.ilean",
+    ".lake/build/lib/lean/FisherInformation.ilean.hash",
+    ".lake/build/lib/lean/FisherInformation.olean",
+    ".lake/build/lib/lean/FisherInformation.olean.hash",
+    ".lake/build/lib/lean/FisherInformation.trace",
+    ".lake/build/lib/lean/FisherInformationExamples/Bernoulli.ilean",
+    ".lake/build/lib/lean/FisherInformationExamples/Bernoulli.ilean.hash",
+    ".lake/build/lib/lean/FisherInformationExamples/Bernoulli.olean",
+    ".lake/build/lib/lean/FisherInformationExamples/Bernoulli.olean.hash",
+    ".lake/build/lib/lean/FisherInformationExamples/Bernoulli.trace",
+    ".lake/build/lib/lean/FisherInformationExamples.ilean",
+    ".lake/build/lib/lean/FisherInformationExamples.ilean.hash",
+    ".lake/build/lib/lean/FisherInformationExamples.olean",
+    ".lake/build/lib/lean/FisherInformationExamples.olean.hash",
+    ".lake/build/lib/lean/FisherInformationExamples.trace"
+  ],
+  "full_linter_count": 16,
+  "named_declaration_count": 46,
+  "public_record_note": "Worker locations and origin metadata were normalized for publication. These retained records describe historical verification runs; normalization is not a new Lean build."
+}

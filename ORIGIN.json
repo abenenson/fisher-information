@@ -1,0 +1,79 @@
+{
+  "copyright_holder": "Adam Benenson",
+  "declared_source_license": "Apache-2.0",
+  "provenance_scope": "Only the listed generic mathematical files. No license is inferred for the surrounding private repository.",
+  "files": [
+    {
+      "source_file": "mathematics/lean/packages/info_geometry/InfoGeometry/Fisher/KLFinite.lean",
+      "original_sha256": "ec2e8b856bb3b6245cf831a3832584fb81c895b625f8d96c3145151678474c33",
+      "extracted_file": "FisherInformation/KLFinite.lean",
+      "extracted_sha256": "69df8681492b510c35169b0ca5a754fc347255b25a859253f543d467d88e0748",
+      "license": "Apache-2.0",
+      "copyright": "2026 Adam Benenson",
+      "transformation": "Rename package/module/namespace; focused import instead of root Mathlib for RegularFinite; add missing authorship and interface documentation; update lambda syntax and line wrapping. Mathematical statements and proofs retained."
+    },
+    {
+      "source_file": "mathematics/lean/packages/info_geometry/InfoGeometry/Fisher/KLIntegral.lean",
+      "original_sha256": "05b0a4f49766fa42fc375cadd093679d461192219a8be3447fc871b35da30ad8",
+      "extracted_file": "FisherInformation/KLIntegral.lean",
+      "extracted_sha256": "d6dc6080cb0f65cb60a640d91425b9ef4fefd3c04b3fcf94eec1f7ce27f2ecae",
+      "license": "Apache-2.0",
+      "copyright": "2026 Adam Benenson",
+      "transformation": "Rename package/module/namespace; focused import instead of root Mathlib for RegularFinite; add missing authorship and interface documentation; update lambda syntax and line wrapping. Mathematical statements and proofs retained."
+    },
+    {
+      "source_file": "mathematics/lean/packages/info_geometry/InfoGeometry/Fisher/KLDivBridge.lean",
+      "original_sha256": "de0319e1a60399ade5c63e09abedcec512585d00b199e5ba74bc396be3b1d7a6",
+      "extracted_file": "FisherInformation/KLDivBridge.lean",
+      "extracted_sha256": "3d29b11084591d6cbdd63707c3be246d27bee10b00b3b80e94ef7bdb63aa5801",
+      "license": "Apache-2.0",
+      "copyright": "2026 Adam Benenson",
+      "transformation": "Rename package/module/namespace; focused import instead of root Mathlib for RegularFinite; add missing authorship and interface documentation; update lambda syntax and line wrapping. Mathematical statements and proofs retained."
+    },
+    {
+      "source_file": "mathematics/lean/packages/info_geometry/InfoGeometry/StatisticalModel/RegularFinite.lean",
+      "original_sha256": "16561f3d544b7c38ed104871fdce2638909d1b1ce2d8c457a07760a34a3ca976",
+      "extracted_file": "FisherInformation/RegularFinite.lean",
+      "extracted_sha256": "d2d67ae4dce6a2bce1529c5b55ca59c456b6dcb8fcd0ab5b32a55feb36c7c0ef",
+      "license": "Apache-2.0",
+      "copyright": "2026 Adam Benenson",
+      "transformation": "Rename package/module/namespace; focused import instead of root Mathlib for RegularFinite; add missing authorship and interface documentation; update lambda syntax and line wrapping. Mathematical statements and proofs retained."
+    },
+    {
+      "source_file": "mathematics/lean/packages/info_geometry/InfoGeometry/Fisher/KLFiniteDirectional.lean",
+      "original_sha256": "7cd84c1d8eb279cb1e23bc491927143f5643141cb54c93393bd9987a0485959d",
+      "extracted_file": "FisherInformation/KLFiniteDirectional.lean",
+      "extracted_sha256": "e878db3bbe7cb04dd83f8b322d7e0293e3e96c787d5cd85d7f625b0ce0a475e7",
+      "license": "Apache-2.0",
+      "copyright": "2026 Adam Benenson",
+      "transformation": "Rename package/module/namespace; focused import instead of root Mathlib for RegularFinite; add missing authorship and interface documentation; update lambda syntax and line wrapping. Mathematical statements and proofs retained."
+    },
+    {
+      "source_file": "mathematics/lean/packages/info_geometry/InfoGeometry/Fisher/KLIntegralRegularAt.lean",
+      "original_sha256": "366b3c4957f4cdfebcb07e8d0cfd4093ecf5b384e7cab52f9a17decbec5e4e93",
+      "extracted_file": "FisherInformation/KLIntegralRegularAt.lean",
+      "extracted_sha256": "3a12564c3180ab5f83e46a3200f4aff51b93124a5655c7d55fedc585945e83c8",
+      "license": "Apache-2.0",
+      "copyright": "2026 Adam Benenson",
+      "transformation": "Rename package/module/namespace; focused import instead of root Mathlib for RegularFinite; add missing authorship and interface documentation; update lambda syntax and line wrapping. Mathematical statements and proofs retained."
+    },
+    {
+      "source_file": "mathematics/lean/packages/info_geometry/InfoGeometry/Fisher/KLIntegralDirectional.lean",
+      "original_sha256": "2c529402b734cc3b513390ce72fe9dce839bb5f95bb7f687e9314c6a34f3452c",
+      "extracted_file": "FisherInformation/KLIntegralDirectional.lean",
+      "extracted_sha256": "3e6180528aeaa214a6f9e07570ab9b2bc533d46515f7fac22f635e8b5dd42d24",
+      "license": "Apache-2.0",
+      "copyright": "2026 Adam Benenson",
+      "transformation": "Rename package/module/namespace; focused import instead of root Mathlib for RegularFinite; add missing authorship and interface documentation; update lambda syntax and line wrapping. Mathematical statements and proofs retained."
+    },
+    {
+      "source_file": "mathematics/lean/packages/info_geometry/InfoGeometry/Fisher/KLIntegralDirectionalFDeriv.lean",
+      "original_sha256": "da4cdf8601086838746e2880a5afd19a8323d807d53858528e6bae05bab92b87",
+      "extracted_file": "FisherInformation/KLIntegralDirectionalFDeriv.lean",
+      "extracted_sha256": "9b298ef34b9d378eb1f1f7b820027c796c7e863d56cd70de9d7d5326a4365ab9",
+      "license": "Apache-2.0",
+      "copyright": "2026 Adam Benenson",
+      "transformation": "Rename package/module/namespace; focused import instead of root Mathlib for RegularFinite; add missing authorship and interface documentation; update lambda syntax and line wrapping. Mathematical statements and proofs retained."
+    }
+  ]
+}
