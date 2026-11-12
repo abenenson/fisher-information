@@ -1,5 +1,7 @@
 # fisher-information
 
+[![Lean verification](https://github.com/abenenson/fisher-information/actions/workflows/lean.yml/badge.svg?branch=main)](https://github.com/abenenson/fisher-information/actions/workflows/lean.yml)
+
 Finite and measure-theoretic Fisher information identities in Lean 4 with Mathlib:
 the second derivative of KL in its second parameter equals the expected squared score.
 
