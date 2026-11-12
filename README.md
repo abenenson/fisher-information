@@ -74,6 +74,6 @@ The [local qualification receipt](docs/qualification.md) records the checked sou
 - Mathlib's parametric-integral, derivative, and KL-divergence libraries.
 
 Copyright 2026 Adam Benenson. Apache 2.0. See [LICENSE](LICENSE), [NOTICE](NOTICE),
-and [extraction provenance](ORIGIN.json). The source comparison in
+and [initial public file inventory](ORIGIN.json). The source comparison in
 [docs/overlap-audit.md](docs/overlap-audit.md) distinguishes these identities and adapters
 from their existing Mathlib foundations. Upstream submission or acceptance is a separate outcome.

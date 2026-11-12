@@ -61,5 +61,5 @@ qualification evidence even on failure. Local evidence, a hosted CI run, and a p
 are different results; a workflow file is not an execution receipt.
 
 Source hashes and stages are written to a new `verification-artifacts` directory on each run.
-Failed attempts are retained. `ORIGIN.json` records the original extraction identities and
-initial transformations; later proof or documentation changes are recorded in Git history.
+Failed attempts are retained. `ORIGIN.json` records the initial public package paths and
+digests; later proof or documentation changes are recorded in Git history.
