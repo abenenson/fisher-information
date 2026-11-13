@@ -3,7 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FisherInformation.KLIntegral
+module
+
+public import FisherInformation.KLIntegral
 
 /-!
 # `FisherInformation.KLIntegralRegularAt`
@@ -19,6 +21,8 @@ under an explicit (and necessarily long) list of dominated-differentiation hypot
 This module packages those hypotheses into a single structure `KLIntegralRegularAt` so downstream
 code can depend on a named interface rather than threading 20+ arguments.
 -/
+
+@[expose] public section
 
 namespace FisherInformation
 

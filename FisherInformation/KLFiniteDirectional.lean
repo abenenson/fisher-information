@@ -3,8 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FisherInformation.KLFinite
-import FisherInformation.RegularFinite
+module
+
+public import FisherInformation.KLFinite
+public import FisherInformation.RegularFinite
 
 /-!
 # `FisherInformation.KLFiniteDirectional`
@@ -21,6 +23,8 @@ This module packages that construction and lifts the existing 1D theorem
 
 - `FisherInformation.fisherKLDir_eq_fisherScoreDir` (under `RegularDensityModelFinite`)
 -/
+
+@[expose] public section
 
 open scoped BigOperators
 

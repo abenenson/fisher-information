@@ -30,6 +30,8 @@ obligations for callers. These assumptions remain part of each theorem's contrac
 ## Use
 
 ```lean
+module
+
 import FisherInformation
 
 open FisherInformation
@@ -52,12 +54,13 @@ members of that family.
 
 ## Build
 
-Supported pair: **Lean 4.34.1**, **Mathlib
-`d13f23b723b8a846827a245b89c10fc7d3f11612`**. All dependencies are locked in
-`lake-manifest.json`; other versions have not been qualified.
+Supported pair: **Lean 4.35.0**, **Mathlib
+`56a005855ea17e0b0958f73ec801ae140b0a1679`**. All dependencies are locked in
+`lake-manifest.json`. The
+[compatibility qualification](docs/compatibility-qualification.json) records fresh checks of this pair.
 
 ```bash
-lake exe cache get
+python3 scripts/fetch_mathlib_cache.py
 lake --rehash --wfail build
 python3 -m unittest discover -s scripts -p 'test_*.py'
 python3 scripts/verify.py
@@ -67,7 +70,8 @@ The verifier rebuilds authored source artifacts, runs all 16 source linters with
 fatal, and checks every named public declaration's transitive axioms against
 `Classical.choice`, `Quot.sound`, and `propext`. Examples build by default but are not
 imported by the library root. See [API and qualification notes](docs/overview.md).
-The [local qualification receipt](docs/qualification.md) records the checked source and results.
+The earlier [local qualification receipt](docs/qualification.md) retains its original source
+and compiler identity. The compatibility receipt records the current source and configuration.
 
 ## References and license
 

@@ -3,7 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FisherInformation.KLIntegralRegularAt
+module
+
+public import FisherInformation.KLIntegralRegularAt
 
 /-!
 # `FisherInformation.KLIntegralDirectional`
@@ -17,6 +19,8 @@ family `p : Θ → X → ℝ` to a 1D line `t ↦ θ + t • v`. This produces a
 This module defines the corresponding “directional integral Fisher” quantities and provides a
 wrapper theorem under the packaged `KLIntegralRegularAt` hypotheses on the line family.
 -/
+
+@[expose] public section
 
 namespace FisherInformation
 

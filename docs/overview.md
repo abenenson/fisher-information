@@ -63,3 +63,14 @@ are different results; a workflow file is not an execution receipt.
 Source hashes and stages are written to a new `verification-artifacts` directory on each run.
 Failed attempts are retained. `ORIGIN.json` records the initial public package paths and
 digests; later proof or documentation changes are recorded in Git history.
+
+## Lean 4.35 compatibility
+
+The [compatibility qualification](compatibility-qualification.json) records fresh exact-source
+builds of all eleven modules and examples, all 16 source linters, and all 46 named transitive
+axiom audits. Explicit public imports and exposed public sections retain the existing exported
+API and definition bodies. All previous proof bodies and theorem hypotheses remain unchanged,
+including the finite theorem's global real-line assumptions and the integral domination ledger.
+Dependency preparation validates every locked dependency and requests only the focused Mathlib
+import closure. Earlier qualification records remain historical; local checks do not establish
+hosted CI success or upstream acceptance.

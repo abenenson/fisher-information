@@ -1,0 +1,338 @@
+{
+  "status": "passed",
+  "scope": "Fresh exact-source builds of all authored modules and examples, full source lint, complete named transitive axiom audit; local verification only",
+  "compiler_version": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "dependency_revisions": {
+    "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+    "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+    "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+    "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+    "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+    "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+    "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+    "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+    "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+  },
+  "source_sha256": {
+    "FisherInformation/KLFinite.lean": "aa07ef16d0ed7652de24bc82c9efadd7802bfd3db7482ca0b42f505a41cd1a10",
+    "FisherInformation/KLIntegral.lean": "3865eebfa1237893dd523930c701b9585cf323ed6b69063de74ba264d7b4f88a",
+    "FisherInformation/KLDivBridge.lean": "d227310faf31d9cd3c92b3b5e0fb331ebbd7789243a915b5986c12c27b64310d",
+    "FisherInformation/RegularFinite.lean": "3d429fa3ed3cae45f48dd14c33d6c6e2fb5c14b2a471b0787fd4c0a4a41273c4",
+    "FisherInformation/KLFiniteDirectional.lean": "75628a92473e190f6ac9c38af2372dcfdba2f911d5a98bc69aebaafde144f768",
+    "FisherInformation/KLIntegralRegularAt.lean": "0ba5590449c93122339ce37820fc1be3340d7a7bdec48e713ef47e5f6a35a808",
+    "FisherInformation/KLIntegralDirectional.lean": "b47408e1dd08bbb01deeee27c0b9287fba965bf25bffb32897bfee168f96daf4",
+    "FisherInformation/KLIntegralDirectionalFDeriv.lean": "36c3b2724f6ce6cdc03c5c6d9efb6b69c3a9393255a734b77ddf9906ffa6286f",
+    "FisherInformation.lean": "11c7fd39d8f7bfe7e465b8418da49e941eb1ac1c9472a1937053dc3b72111aa2",
+    "FisherInformationExamples/Bernoulli.lean": "f6a10789b116cb1a32fce8bf939bbb040cc00693fcfb32d1b56bbd9c3e436c62",
+    "FisherInformationExamples.lean": "35dcedd15731f1247fbf684fb43a8c9f3317a2550ecb9a85c186b365c50fdf8f"
+  },
+  "verification_input_sha256": {
+    "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+    "lakefile.lean": "818444a762a7c3da938cf0b06c36f5d35c663cd4590fda63889b2bb762732624",
+    "lake-manifest.json": "5a2ae56a0b2c0b8f3cac7f0512c85d7d432c9e7d35c862e685a2ca465aeb40f1",
+    "verification.json": "011e01541395faf1bbd4a66045cc988ba4aeb3a92479a9583468948821ee018c",
+    "scripts/verify.py": "5728ad0a661ba7f69a4c2aee515e5c8269ecb7138b7249a0610d4ccc347661cb",
+    "scripts/test_verify.py": "11797d41f3aca28b545b6f2f1c77738ae16f3e96afe732077aed9c60207f5673",
+    "scripts/fetch_mathlib_cache.py": "72c55aac4b0085f2e1e6bfa778db84ca99661c78bc15dc5721234291200fa14b",
+    "scripts/test_fetch_mathlib_cache.py": "c7de65306e04de14d788b0ea269bbfc64b827a4f68e7684cf1f1ec10bb90da7e"
+  },
+  "stages": [
+    {
+      "name": "compiler-version",
+      "exit_code": 0
+    },
+    {
+      "name": "exact-build",
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FisherInformation-KLFinite.lean",
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FisherInformation-KLIntegral.lean",
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FisherInformation-KLDivBridge.lean",
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FisherInformation-RegularFinite.lean",
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FisherInformation-KLFiniteDirectional.lean",
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FisherInformation-KLIntegralRegularAt.lean",
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FisherInformation-KLIntegralDirectional.lean",
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FisherInformation-KLIntegralDirectionalFDeriv.lean",
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FisherInformation.lean",
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FisherInformationExamples-Bernoulli.lean",
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FisherInformationExamples.lean",
+      "exit_code": 0
+    },
+    {
+      "name": "axioms",
+      "exit_code": 0
+    }
+  ],
+  "full_linter_count": 16,
+  "named_declaration_count": 46,
+  "axioms": {
+    "FisherInformation.klFiniteReal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.klFiniteRealParamGen": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.klFiniteRealParam": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.deriv_log_div_const": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.deriv_klFiniteRealParam_second": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherScore": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherKL": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherKL_eq_fisherScore": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.klIntegralReal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.klIntegralRealParam": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.klIntegralReal_eq_integral_klFun_of_integral_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.hasDerivAt_klIntegrand_secondArg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.deriv_klIntegralRealParam_second": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.klFiniteRealParam_eq_klIntegralRealParam_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherScoreIntegral": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherKLIntegral": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.hasDerivAt_scoreIntegrand_secondArg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.integral_second_deriv_eq_zero_of_integral_eq_const": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherKLIntegral_eq_fisherScoreIntegral": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherKLIntegral_eq_fisherScoreIntegral_of_integral_eq_const": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.klIntegralReal_eq_toReal_klDiv_withDensity_of_integral_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.klIntegralRealParam_eq_toReal_klDiv_withDensity_of_integral_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.RegularDensityModelFinite": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.RegularDensityModelFinite.ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.RegularDensityModelFinite.line_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Fisher.pLine": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Fisher.fisherScoreDir": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Fisher.fisherKLDir": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Fisher.fisherKLDir_eq_fisherScoreDir": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.KLIntegralRegularAt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherKLIntegral_eq_fisherScoreIntegral_of_regularAt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.pLine": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherScoreIntegralDir": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherKLIntegralDir": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherKLIntegralDir_eq_fisherScoreIntegralDir": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherScoreIntegralDir_eq_integral_fderiv_sq_div": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.fisherKLIntegralDir_eq_integral_fderiv_sq_div": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Examples.bernoulli": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Examples.bernoulli_pos": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Examples.bernoulli_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Examples.bernoulli_fisherScore_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Examples.bernoulli_fisherKL_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Examples.bernoulli_fisherScoreIntegral_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Examples.bernoulli_counting_kl": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Examples.bernoulli_fisherKLIntegral_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FisherInformation.Examples.bernoulli_measure_kl": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "python_regression_tests": 20,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "historical_receipts": "Other qualification records retain their original compiler and source identities; this receipt does not establish hosted CI or upstream acceptance."
+}
