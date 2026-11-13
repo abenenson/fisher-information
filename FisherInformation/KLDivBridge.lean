@@ -3,10 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.InformationTheory.KullbackLeibler.Basic
-import Mathlib.MeasureTheory.Function.L1Space.HasFiniteIntegral
-import Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap
-import FisherInformation.KLIntegral
+module
+
+public import Mathlib.InformationTheory.KullbackLeibler.Basic
+public import Mathlib.MeasureTheory.Function.L1Space.HasFiniteIntegral
+public import Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap
+public import FisherInformation.KLIntegral
 
 /-!
 # FisherInformation.KLDivBridge
@@ -24,6 +26,8 @@ real-valued `∫ p log(p/q)` KL formula and its differentiability lemmas, while 
   with equal total mass, `klIntegralReal p q = (klDiv μp μq).toReal` where
   `μp = μ.withDensity (ofReal ∘ p)` and `μq = μ.withDensity (ofReal ∘ q)`.
 -/
+
+@[expose] public section
 
 open TopologicalSpace MeasureTheory Filter Metric
 

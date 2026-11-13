@@ -3,9 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Analysis.Calculus.ParametricIntegral
-import Mathlib.InformationTheory.KullbackLeibler.KLFun
-import FisherInformation.KLFinite
+module
+
+public import Mathlib.Analysis.Calculus.ParametricIntegral
+public import Mathlib.InformationTheory.KullbackLeibler.KLFun
+public import FisherInformation.KLFinite
 
 /-!
 # FisherInformation.KLIntegral
@@ -35,6 +37,8 @@ parametric integrals.
 * `klIntegralReal_eq_integral_klFun_of_integral_eq` : bridge to Mathlib’s `InformationTheory.klFun`
   (the f-divergence integrand for KL).
 -/
+
+@[expose] public section
 
 open scoped BigOperators
 

@@ -3,7 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FisherInformation.KLFinite
+module
+
+public import FisherInformation.KLFinite
 
 /-!
 # `FisherInformation.RegularFinite`
@@ -21,6 +23,8 @@ The key design choice is to express differentiability requirements **along 1D li
 
 - `FisherInformation.RegularDensityModelFinite`
 -/
+
+@[expose] public section
 
 open scoped BigOperators
 

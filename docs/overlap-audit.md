@@ -1,7 +1,7 @@
 # Mathlib overlap and contribution scope
 
 The supported dependency is Mathlib
-`d13f23b723b8a846827a245b89c10fc7d3f11612`, paired with Lean 4.34.1.
+`56a005855ea17e0b0958f73ec801ae140b0a1679`, paired with Lean 4.35.0.
 
 The mathematical identities are classical. This package assembles a focused, explicitly
 scoped formal API; it does not claim priority, exclusive formalization, new mathematical
@@ -35,3 +35,11 @@ to the existing extended-real KL API, stated with `.toReal`.
 Potential upstream work would be one focused identity or adapter at a time, with naming,
 minimal hypotheses, and equivalent Mathlib formulations reviewed first. The present source
 inspection is not an exhaustive search of all equivalent formalizations or external libraries.
+
+## Compatibility scope
+
+The 4.35 port changes module/export declarations and dependency preparation only. The existing
+global finite nonvanishing and differentiability premises, local integral domination data, and
+`.toReal` density-to-measure adapter restrictions remain explicit and unchanged. The calculus
+and measure-KL foundations above are still reused; no broader Fisher, statistical inference,
+or geometry theorem is added. Earlier qualification records retain their original identities.

@@ -3,10 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FisherInformation
-import Mathlib.Analysis.SpecialFunctions.ExpDeriv
-import Mathlib.MeasureTheory.Measure.Count
-import Mathlib.Tactic.NormNum
+module
+
+public import FisherInformation
+public import Mathlib.Analysis.SpecialFunctions.ExpDeriv
+public import Mathlib.MeasureTheory.Measure.Count
+public import Mathlib.Tactic.NormNum
 
 /-!
 # Logistic Bernoulli family
@@ -15,6 +17,8 @@ The success probability is `exp θ / (1 + exp θ)`. Every parameter gives a posi
 law. Its Fisher information at zero is `1/4`, proved both as KL curvature and as an integral
 score. A separate consumer identifies the real KL integral with Mathlib's measure KL.
 -/
+
+@[expose] public section
 
 namespace FisherInformation.Examples
 

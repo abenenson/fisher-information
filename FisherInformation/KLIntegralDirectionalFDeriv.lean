@@ -3,8 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Analysis.Calculus.LineDeriv.Basic
-import FisherInformation.KLIntegralDirectional
+module
+
+public import Mathlib.Analysis.Calculus.LineDeriv.Basic
+public import FisherInformation.KLIntegralDirectional
 
 /-!
 # `FisherInformation.KLIntegralDirectionalFDeriv`
@@ -19,6 +21,8 @@ Under pointwise Fréchet differentiability of `p · x` at `θ`, we can rewrite t
 `deriv (t ↦ p (θ + t•v) x) 0` as `(fderiv p θ) v`, giving a cleaner expression for the
 directional score Fisher integral.
 -/
+
+@[expose] public section
 
 namespace FisherInformation
 
