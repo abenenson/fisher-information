@@ -10,13 +10,14 @@ public import FisherInformation.KLIntegral
 public import FisherInformation.KLDivBridge
 public import FisherInformation.KLFiniteDirectional
 public import FisherInformation.KLIntegralDirectionalFDeriv
+public import FisherInformation.ProductFinite
 public import FisherInformation.FiniteRiemannian
 
 /-!
 # Fisher information from KL curvature and scores
 
 Finite and integral Fisher identities, a density-to-measure KL bridge, line-directional
-variants, and smooth finite score metrics under explicit regularity hypotheses.
+variants, independent finite observations, and smooth score metrics under explicit hypotheses.
 Examples are an opt-in import.
 -/
 
