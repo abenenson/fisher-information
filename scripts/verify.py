@@ -217,6 +217,11 @@ def authored_sources(root):
             set(path.relative_to(root).parts)}
 
 
+def utility_files(root):
+    """Enumerate Python utilities used to prepare and verify this repository."""
+    return {str(path.relative_to(root)) for path in (root / 'scripts').glob('*.py')}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--evidence-dir', type=Path)
@@ -265,9 +270,10 @@ def main():
         actual_sources = authored_sources(root)
         assert actual_sources == set(config['source_files']) | {'lakefile.lean'}, \
             'Authored Lean file coverage differs from manifest'
+        actual_utilities = utility_files(root)
         original_inputs = {'verification.json': config_bytes}
         for relative in [*config['source_files'], 'lean-toolchain',
-                         'lakefile.lean', 'lake-manifest.json']:
+                         'lakefile.lean', 'lake-manifest.json', *sorted(actual_utilities)]:
             original_inputs[relative] = (root / relative).read_bytes()
         input_hashes = {relative: hashlib.sha256(content).hexdigest()
                         for relative, content in original_inputs.items()}
@@ -276,6 +282,8 @@ def main():
         record['configuration_sha256'] = {relative: input_hashes[relative] for relative in
                                            ['verification.json', 'lean-toolchain',
                                             'lakefile.lean', 'lake-manifest.json']}
+        record['utility_sha256'] = {relative: input_hashes[relative]
+                                    for relative in sorted(actual_utilities)}
         toolchain = original_inputs['lean-toolchain'].decode().strip()
         version = run('compiler-version', ['lake', 'env', 'lean', '--version']).strip()
         assert toolchain == 'leanprover/lean4:v4.35.0' and 'version 4.35.0,' in version
@@ -343,6 +351,8 @@ def main():
             record['axioms'][name] = sorted(axioms)
         assert authored_sources(root) == actual_sources, \
             'Authored Lean file inventory changed during qualification'
+        assert utility_files(root) == actual_utilities, \
+            'Python utility inventory changed during qualification'
         for relative, expected in input_hashes.items():
             actual = hashlib.sha256((root / relative).read_bytes()).hexdigest()
             assert actual == expected, 'Verification input changed during qualification: ' + relative

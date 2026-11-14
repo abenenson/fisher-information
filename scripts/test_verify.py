@@ -19,6 +19,8 @@ spec.loader.exec_module(verify)
 def fixture_repository(root):
     """Create a minimal, isolated repository for mocked end-to-end verifier controls."""
     (root / 'scripts').mkdir(parents=True)
+    (root / 'scripts/verify.py').write_text('fixture verifier\n')
+    (root / 'scripts/test_verify.py').write_text('fixture tests\n')
     (root / 'lean-toolchain').write_text('leanprover/lean4:v4.35.0\n')
     (root / 'lakefile.lean').write_text('import Lake\n')
     (root / 'lake-manifest.json').write_text(json.dumps({'packages': []}))
@@ -196,13 +198,16 @@ class VerificationControls(unittest.TestCase):
                              hashlib.sha256((root / 'Fixture.lean').read_bytes()).hexdigest())
             self.assertEqual(record['configuration_sha256']['verification.json'],
                              hashlib.sha256((root / 'verification.json').read_bytes()).hexdigest())
+            self.assertEqual(record['utility_sha256']['scripts/verify.py'],
+                             hashlib.sha256((root / 'scripts/verify.py').read_bytes()).hexdigest())
             self.assertEqual(record['removed_authored_artifacts'],
                              ['.lake/build/lib/lean/Fixture.olean'])
             self.assertEqual(stale.read_bytes(), b'fresh authored artifact')
 
     def test_late_source_and_configuration_drift_rejected_end_to_end(self):
         for drift in ['source edit', 'source addition', 'source removal',
-                      'verification.json', 'lean-toolchain', 'lakefile.lean', 'lake-manifest.json']:
+                      'verification.json', 'lean-toolchain', 'lakefile.lean', 'lake-manifest.json',
+                      'utility edit', 'utility addition', 'utility removal']:
             with self.subTest(drift=drift), tempfile.TemporaryDirectory() as temp:
                 root = Path(temp) / 'repo'
                 fixture_repository(root)
@@ -221,6 +226,12 @@ class VerificationControls(unittest.TestCase):
                             (root / 'Extra.lean').write_text('module\n')
                         elif drift == 'source removal':
                             (root / 'Fixture.lean').unlink()
+                        elif drift == 'utility edit':
+                            (root / 'scripts/verify.py').write_text('changed verifier\n')
+                        elif drift == 'utility addition':
+                            (root / 'scripts/extra.py').write_text('late utility\n')
+                        elif drift == 'utility removal':
+                            (root / 'scripts/test_verify.py').unlink()
                         else:
                             path = root / drift
                             path.write_bytes(path.read_bytes() + b'\n')
