@@ -6,6 +6,7 @@ Authors: Adam Benenson
 module
 
 public import FisherInformationExamples.Bernoulli
+public import FisherInformationExamples.BernoulliRiemannian
 
 /-! # Checked Bernoulli consumers of the finite, integral, and measure-KL APIs -/
 
