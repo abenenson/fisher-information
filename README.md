@@ -18,6 +18,10 @@ The library provides:
   Fréchet-derivative expression for the integral score under pointwise differentiability.
 - A smooth tangent-bundle Fisher metric for finite sample spaces and finite-dimensional
   real parameter spaces, from positive smooth atoms whose scores separate directions.
+- Centered scores, additivity for independent finite observations sharing a parameter,
+  and exact Fisher scaling for any finite number of IID samples, including zero samples.
+- Positive normalized categorical logit families with identifiable baseline coordinates,
+  smooth atoms, and score separation.
 
 These are formalizations of classical identities. This package does not include the
 Čencov uniqueness theorem, a manifold connection, or a general statistical inference API.
@@ -65,6 +69,25 @@ smoothness of the weighted score bilinear form and uses finite dimension to show
 with the parameter space's topology. Normalization is a separate requirement for interpreting
 the atoms as a probability law; the Bernoulli examples prove it explicitly.
 
+## Independent samples and categorical models
+
+`fisherScoreBilin_prod` adds the information of two independent normalized finite
+observations, even when they share the same parameter. `fisherScoreBilin_iid` gives
+`fisherScoreBilin (iidDensity p n) θ u v = (n : ℝ) * fisherScoreBilin p θ u v`.
+The source atoms need only be nonzero and Fréchet differentiable at the parameter being
+evaluated; normalization holds throughout the parameter space. The empty sample has
+constant density one and zero information. Positive atoms give the probability interpretation.
+
+The [categorical API](FisherInformation/Categorical.lean) fixes one baseline logit at zero
+and uses a finite vector of remaining logits. It proves positivity, normalization,
+smoothness, identifiability and score separation. The
+[checked metric consumer](FisherInformationExamples/CategoricalRiemannian.lean) applies the
+same smooth metric constructor. For two logits at zero, the three outcomes are equiprobable
+and the tangent pairing is
+`(u 0 * v 0 + u 1 * v 1) / 3 - (u 0 + u 1) * (v 0 + v 1) / 9`.
+The zero-logit-coordinate case is also checked: one outcome, probability one, and a trivial
+parameter space.
+
 ## Build
 
 Supported pair: **Lean 4.35.0**, **Mathlib
@@ -83,8 +106,9 @@ The verifier rebuilds authored source artifacts, runs all 16 source linters with
 fatal, and checks every named public declaration's transitive axioms against
 `Classical.choice`, `Quot.sound`, and `propext`. Examples build by default but are not
 imported by the library root. See [API and qualification notes](docs/overview.md).
-The earlier [local qualification receipt](docs/qualification.md) retains its original source
-and compiler identity. The compatibility receipt records the current source and configuration.
+The earlier [local qualification receipt](docs/qualification.md) and initial compatibility
+receipt retain their original source and compiler identities. New verifier runs produce
+separate receipts bound to the current source, configuration and utilities.
 
 ## References and license
 

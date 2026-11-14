@@ -31,6 +31,8 @@ The conclusion explicitly applies `.toReal` to Mathlib's `klDiv`; the library do
 - `KLIntegralDirectional`: integral quantities along a vector-parameter line.
 - `KLIntegralDirectionalFDeriv`: Fréchet-derivative rewrites of the directional integral score.
 - `ScoreFinite`: log-density score differentials and their finite Fisher bilinear form.
+- `ProductFinite`: centered scores, independent-product additivity and finite IID scaling.
+- `Categorical`: a positive normalized baseline-logit family and its score separation.
 - `FiniteRiemannian`: the actual score form as a smooth tangent-bundle Riemannian metric.
 
 The top-level library imports all these focused mathematical modules. Only Mathlib and its
@@ -70,6 +72,19 @@ their scores for arbitrary parameters and directions. The false-outcome score is
 separation and supplies the smooth Fisher metric for the same positive normalized family.
 Its pairing at the fair member is `u * v / 4`.
 
+`FisherInformationExamples.CategoricalRiemannian` uses baseline categorical logits to
+construct the same genuine smooth metric for any finite logit index. For `Fin 2`, it proves
+the explicit zero-logit covariance pairing and positive definiteness. The core categorical
+module checks the unique parameter and baseline atom of mass one for `Fin 0`.
+
+The independent-observation API differentiates global normalization to center each score.
+Product scores add, so the centered cross terms vanish in the Fisher bilinear form.
+`iidDensity p n` is the actual product law on samples `Fin n → α`; its information is
+`(n : ℝ)` times that of one observation, with a separately checked zero-sample case.
+Nonvanishing and Fréchet differentiability are required only at the evaluation parameter.
+These algebraic identities also admit nonzero signed atoms; statistical interpretation
+requires positivity in addition to normalization.
+
 These examples do not assert that generic domination or regularity data follows merely
 from normalization, nor do they claim a new theorem of statistical estimation.
 
@@ -80,8 +95,9 @@ Verification rebuilds the authored artifacts from the actual source, recompiles 
 module identities with all 16 environment linters and documentation checks, and audits named
 transitive axioms against `propext`, `Classical.choice`, and `Quot.sound`. The axiom check
 follows private/generated helpers used by each named declaration.
-The verifier freezes the authored source inventory and source/configuration hashes before
-running checks. It requires the same inventory and hashes before accepting the receipt;
+The verifier freezes the authored source and Python utility inventories and the source,
+configuration and utility hashes before running checks. It requires the same inventories
+and hashes before accepting the receipt;
 an edit during qualification invalidates that run.
 
 The pinned immutable CI workflow uses read-only repository permissions and retains raw
