@@ -25,3 +25,6 @@ arbitrary pairs of family members. Their analytic premises are proved in the exa
 This is local qualification evidence. Hosted CI and public repository publication are
 separate steps. The immutable CI workflow repeats the same source verifier on pushes
 and pull requests.
+
+Historical resource accounting omits host-specific launcher paths; measurements and the
+checked command are retained.
