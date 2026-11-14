@@ -2,8 +2,8 @@
 
 [![Lean verification](https://github.com/abenenson/fisher-information/actions/workflows/lean.yml/badge.svg?branch=main)](https://github.com/abenenson/fisher-information/actions/workflows/lean.yml)
 
-Finite and measure-theoretic Fisher information identities in Lean 4 with Mathlib:
-the second derivative of KL in its second parameter equals the expected squared score.
+Finite and measure-theoretic Fisher information in Lean 4 with Mathlib: KL curvature
+identities and smooth finite score Fisher metrics.
 
 The library provides:
 
@@ -16,6 +16,8 @@ The library provides:
   extended-real measure KL, stated using `.toReal` and the listed density hypotheses.
 - Line-directional variants for parameters in a real normed vector space, including a
   Fréchet-derivative expression for the integral score under pointwise differentiability.
+- A smooth tangent-bundle Fisher metric for finite sample spaces and finite-dimensional
+  real parameter spaces, from positive smooth atoms whose scores separate directions.
 
 These are formalizations of classical identities. This package does not include the
 Čencov uniqueness theorem, a manifold connection, or a general statistical inference API.
@@ -51,6 +53,17 @@ those hypotheses for the globally positive logistic family. They prove Fisher in
 `1/4` at parameter zero through the finite KL Hessian, the counting-measure KL Hessian,
 and the integral score. A further consumer applies the measure-KL bridge to two arbitrary
 members of that family.
+
+The [Bernoulli metric example](FisherInformationExamples/BernoulliRiemannian.lean) also
+computes both log-density scores at every parameter, proves smoothness and score separation,
+and constructs the actual smooth Fisher metric. At parameter zero its tangent pairing is
+`u * v / 4`.
+
+The metric constructor `FisherInformation.Fisher.fisherRiemannianMetric` takes a finite
+family `p`, strict positivity, smoothness of every atom, and `ScoreSeparating p`. It proves
+smoothness of the weighted score bilinear form and uses finite dimension to show compatibility
+with the parameter space's topology. Normalization is a separate requirement for interpreting
+the atoms as a probability law; the Bernoulli examples prove it explicitly.
 
 ## Build
 

@@ -20,6 +20,9 @@ results, or Mathlib acceptance.
   with densities; it does not reimplement measure KL or its data-processing theory.
 - `Measure.withDensity`, Radon–Nikodym transport, and integration against densities
   provide the remaining adapter steps.
+- Mathlib's continuous linear map calculus provides the smoothness of log-density
+  differentials and their weighted outer products. `Bundle.ContMDiffRiemannianMetric`
+  supplies the canonical smooth metric structure and its Riemannian-bundle instances.
 
 ## Scoped API contribution
 
@@ -32,14 +35,23 @@ The density-to-measure bridge includes all its nonnegativity, equal-mass, integr
 nonzero-reference, sigma-finiteness, and absolute-continuity assumptions. It is an adapter
 to the existing extended-real KL API, stated with `.toReal`.
 
+The finite metric API assembles the actual score outer products into that existing
+Mathlib metric structure. It proves symmetry, positivity from score separation, smooth
+dependence from positive smooth atoms, and compatibility with the original topology in
+finite dimension. It does not introduce a separate metric or manifold typeclass.
+The logistic Bernoulli consumer explicitly proves all model hypotheses and evaluates
+the fair-member tangent pairing.
+
 Potential upstream work would be one focused identity or adapter at a time, with naming,
 minimal hypotheses, and equivalent Mathlib formulations reviewed first. The present source
 inspection is not an exhaustive search of all equivalent formalizations or external libraries.
 
 ## Compatibility scope
 
-The 4.35 port changes module/export declarations and dependency preparation only. The existing
-global finite nonvanishing and differentiability premises, local integral domination data, and
+The initial 4.35 port changed module/export declarations and dependency preparation only.
+The existing global finite nonvanishing and differentiability premises, local integral
+domination data, and
 `.toReal` density-to-measure adapter restrictions remain explicit and unchanged. The calculus
-and measure-KL foundations above are still reused; no broader Fisher, statistical inference,
-or geometry theorem is added. Earlier qualification records retain their original identities.
+and measure-KL foundations above are still reused. The smooth finite metric API is a separate
+addition with the hypotheses described above. Earlier qualification records retain their
+original identities.

@@ -30,10 +30,29 @@ The conclusion explicitly applies `.toReal` to Mathlib's `klDiv`; the library do
 - `KLIntegralRegularAt`: explicit local regularity data for the integral identity.
 - `KLIntegralDirectional`: integral quantities along a vector-parameter line.
 - `KLIntegralDirectionalFDeriv`: Fréchet-derivative rewrites of the directional integral score.
+- `ScoreFinite`: log-density score differentials and their finite Fisher bilinear form.
+- `FiniteRiemannian`: the actual score form as a smooth tangent-bundle Riemannian metric.
 
-The top-level library imports all these focused mathematical modules. No module imports the
-source project's selection predicates, scientific interpretations, or a Cencov package.
-Only Mathlib and its locked public dependencies are required.
+The top-level library imports all these focused mathematical modules. Only Mathlib and its
+locked public dependencies are required.
+
+## Smooth finite Fisher metric
+
+`FisherInformation.Fisher.scoreCLM p θ x` is the Fréchet derivative of
+`θ ↦ log (p θ x)`. The bilinear form `fisherScoreBilin p θ` is the finite sum
+`∑ x, p θ x * scoreCLM p θ x u * scoreCLM p θ x v` on directions `u` and `v`.
+The continuous bilinear map `fisherScoreContinuousBilin` has exactly this evaluation.
+
+For a finite sample space and a finite-dimensional real normed parameter space,
+`fisherRiemannianMetric` constructs Mathlib's `Bundle.ContMDiffRiemannianMetric` on the
+tangent bundle. Its hypotheses are global strict positivity of every atom, global `C∞`
+regularity of every atom, and `ScoreSeparating p`: each nonzero direction has a nonzero
+score at every parameter. The proof derives positive definiteness, boundedness of each
+metric unit ball, and smoothness of the actual score bilinear form. The evaluation theorem
+`fisherRiemannianMetric_inner` identifies every tangent pairing with `fisherScoreBilin`.
+
+This construction does not infer normalization or score separation from smoothness.
+Normalization must be checked separately for a probability-law interpretation.
 
 ## Checked consumers
 
@@ -45,6 +64,12 @@ applies the finite identity with all its premises discharged. Counting-measure c
 then gives the same integral Hessian and score. The measure-KL example independently
 discharges every bridge premise for two members of the family.
 
+`FisherInformationExamples.BernoulliRiemannian` proves both atoms smooth and computes
+their scores for arbitrary parameters and directions. The false-outcome score is
+`-exp θ / (1 + exp θ) * u`, so it is nonzero whenever `u ≠ 0`. This discharges score
+separation and supplies the smooth Fisher metric for the same positive normalized family.
+Its pairing at the fair member is `u * v / 4`.
+
 These examples do not assert that generic domination or regularity data follows merely
 from normalization, nor do they claim a new theorem of statistical estimation.
 
@@ -55,6 +80,9 @@ Verification rebuilds the authored artifacts from the actual source, recompiles 
 module identities with all 16 environment linters and documentation checks, and audits named
 transitive axioms against `propext`, `Classical.choice`, and `Quot.sound`. The axiom check
 follows private/generated helpers used by each named declaration.
+The verifier freezes the authored source inventory and source/configuration hashes before
+running checks. It requires the same inventory and hashes before accepting the receipt;
+an edit during qualification invalidates that run.
 
 The pinned immutable CI workflow uses read-only repository permissions and retains raw
 qualification evidence even on failure. Local evidence, a hosted CI run, and a public release
@@ -66,10 +94,10 @@ digests; later proof or documentation changes are recorded in Git history.
 
 ## Lean 4.35 compatibility
 
-The [compatibility qualification](compatibility-qualification.json) records fresh exact-source
-builds of all eleven modules and examples, all 16 source linters, and all 46 named transitive
-axiom audits. Explicit public imports and exposed public sections retain the existing exported
-API and definition bodies. All previous proof bodies and theorem hypotheses remain unchanged,
+The initial [compatibility qualification](compatibility-qualification.json) records exact-source
+builds of the original eleven modules and examples, all 16 source linters, and all 46 named
+transitive axiom audits. Explicit public imports and exposed public sections retain the existing
+exported API and definition bodies. All previous proof bodies and theorem hypotheses remain unchanged,
 including the finite theorem's global real-line assumptions and the integral domination ledger.
 Dependency preparation validates every locked dependency and requests only the focused Mathlib
 import closure. Earlier qualification records remain historical; local checks do not establish
