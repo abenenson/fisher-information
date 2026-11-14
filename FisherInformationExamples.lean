@@ -7,7 +7,8 @@ module
 
 public import FisherInformationExamples.Bernoulli
 public import FisherInformationExamples.BernoulliRiemannian
+public import FisherInformationExamples.CategoricalRiemannian
 
-/-! # Checked Bernoulli consumers of the finite, integral, and measure-KL APIs -/
+/-! # Checked Bernoulli and categorical consumers of the Fisher information APIs -/
 
 @[expose] public section
