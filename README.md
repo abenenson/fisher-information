@@ -120,3 +120,12 @@ Copyright 2026 Adam Benenson. Apache 2.0. See [LICENSE](LICENSE), [NOTICE](NOTIC
 and [initial public file inventory](ORIGIN.json). The source comparison in
 [docs/overlap-audit.md](docs/overlap-audit.md) distinguishes these identities and adapters
 from their existing Mathlib foundations. Upstream submission or acceptance is a separate outcome.
+
+## Releases and related libraries
+
+Start with the [`v0.1.0` release](https://github.com/abenenson/fisher-information/releases/tag/v0.1.0) for the supported toolchain and verification run.
+
+- [cencov-petz](https://github.com/abenenson/cencov-petz) covers uniqueness of the finite Fisher metric.
+- [finite-relative-entropy](https://github.com/abenenson/finite-relative-entropy) covers finite KL divergence.
+
+[Browse the Lean library index](https://adambenenson.com/projects/#formal-methods).
